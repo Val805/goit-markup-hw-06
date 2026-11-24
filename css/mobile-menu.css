@@ -19,6 +19,16 @@
   pointer-events: auto;
 }
 
+@media screen and (min-width: 768px) {
+  .mobile-menu,
+  .mobile-menu.is-open {
+    display: none !important;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+}
+
 .mobile-menu-container {
   position: relative;
   width: 100%;
@@ -101,13 +111,4 @@
 
 .mobile-social-icon {
   fill: currentColor;
-}
-@media screen and (min-width: 768px) {
-  .mobile-menu,
-  .mobile-menu.is-open {
-    display: none !important;
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-  }
 }
