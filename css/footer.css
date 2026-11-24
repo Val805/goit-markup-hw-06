@@ -1,15 +1,19 @@
 .footer {
   background-color: #2e2f42;
-  padding: 100px 0;
+  padding: 96px 0;
 }
 
 .footer-container {
   display: flex;
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: center;
+  gap: 72px;
 }
 
 .footer-info {
-  margin-right: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .footer-logo {
@@ -18,7 +22,7 @@
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
   font-size: 18px;
-  line-height: 1.33;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #f4f4fd;
@@ -29,15 +33,18 @@
 }
 
 .footer-text {
-  max-width: 264px;
+  max-width: 288px;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #f4f4fd;
+  text-align: left;
 }
 
 .footer-social {
-  margin-right: 83px; /* Виправлено з 80px на 83px */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .footer-social-title {
@@ -47,6 +54,7 @@
   letter-spacing: 0.02em;
   color: #ffffff;
   margin-bottom: 16px;
+  text-align: center;
 }
 
 .footer-social-list {
@@ -75,6 +83,13 @@
   fill: currentColor;
 }
 
+.footer-subscribe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
 .footer-subscribe-title {
   font-weight: 500;
   font-size: 16px;
@@ -82,32 +97,40 @@
   letter-spacing: 0.02em;
   color: #ffffff;
   margin-bottom: 16px;
+  text-align: center;
 }
 
 .footer-form {
   display: flex;
-  gap: 24px;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+}
+
+.footer-form-label {
+  width: 100%;
 }
 
 .footer-form-input {
-  width: 264px;
+  width: 100%;
   height: 40px;
   border: 1px solid #ffffff;
   background-color: transparent;
   font-size: 12px;
-  font-weight: 400; /* Додано явно */
-  line-height: 1.17; /* Виправлено з 1.5 на 1.17 */
+  font-weight: 400;
+  line-height: 1.17;
   letter-spacing: 0.04em;
   padding-left: 16px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   color: #ffffff;
   outline: transparent;
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1); /* Додано transition */
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-form-input:focus {
-  border-color: #31d0aa; /* Виправлено стан фокусу */
+  border-color: #31d0aa;
 }
 
 .footer-form-input::placeholder {
@@ -135,10 +158,86 @@
 
 .footer-form-btn:hover,
 .footer-form-btn:focus {
-  background-color: #31d0aa; /* Виправлено колір ховеру кнопки підписки на #31d0aa */
+  background-color: #31d0aa;
 }
 
 .footer-btn-icon {
   margin-left: 16px;
   fill: #ffffff;
+}
+
+@media screen and (min-width: 768px) {
+  .footer-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding-left: 108px;
+    padding-right: 108px;
+    column-gap: 24px;
+    row-gap: 72px;
+  }
+
+  .footer-info {
+    align-items: flex-start;
+  }
+
+  .footer-text {
+    max-width: 264px;
+  }
+
+  .footer-social {
+    align-items: flex-start;
+  }
+
+  .footer-social-title {
+    text-align: left;
+  }
+
+  .footer-subscribe {
+    align-items: flex-start;
+    width: auto;
+  }
+
+  .footer-subscribe-title {
+    text-align: left;
+  }
+
+  .footer-form {
+    flex-direction: row;
+    gap: 24px;
+    width: auto;
+  }
+
+  .footer-form-label {
+    width: auto;
+  }
+
+  .footer-form-input {
+    width: 264px;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .footer {
+    padding: 100px 0;
+  }
+
+  .footer-container {
+    flex-wrap: nowrap;
+    padding-left: 15px;
+    padding-right: 15px;
+    gap: 0;
+  }
+
+  .footer-info {
+    margin-right: 120px;
+  }
+
+  .footer-social {
+    margin-right: 83px;
+  }
+
+  .footer-subscribe {
+    margin-left: auto;
+  }
 }
